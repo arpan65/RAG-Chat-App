@@ -70,7 +70,7 @@ Helpful Answer:"""
 
 BUCKET_NAME = "rag-test-source"
 file_path = f"/tmp"
-bedrock = boto3.client(service_name="bedrock-runtime",region_name='us-east-1')
+bedrock = boto3.client('bedrock', region_name='us-east-1', endpoint_url="https://bedrock-runtime.us-east-1.amazonaws.com")
 s3 = boto3.client(service_name="s3")
 
 prompt = PromptTemplate(
