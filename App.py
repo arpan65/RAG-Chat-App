@@ -68,9 +68,9 @@ template = """Use the following pieces of context to answer the question at the 
 Question: {input}
 Helpful Answer:"""
 
-BUCKET_NAME = "rag-test-source"
+BUCKET_NAME = "rag-bot-source"
 file_path = f"/tmp"
-bedrock = boto3.client('bedrock-runtime', region_name='us-east-1', endpoint_url="https://bedrock-runtime.us-east-1.amazonaws.com")
+bedrock = boto3.client('bedrock-runtime')
 s3 = boto3.client(service_name="s3")
 
 prompt = PromptTemplate(
