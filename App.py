@@ -55,7 +55,7 @@ def download_vectors(policy_number):
     Path(file_path).mkdir(parents=True, exist_ok=True)
     s3.download_file(Bucket=BUCKET_NAME, Key=s3_vector_faiss_key, Filename=f"{file_path}/my_faiss.faiss")
     s3.download_file(Bucket=BUCKET_NAME, Key=s3_vector_pkl_key, Filename=f"{file_path}/my_faiss.pkl")
-    st.info("Downloaded")
+   
 
 def load_faiss_index():
     faiss_index = FAISS.load_local(index_name="my_faiss", folder_path=file_path, embeddings=bedrock_embeddings, allow_dangerous_deserialization=True)
