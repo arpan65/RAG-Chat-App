@@ -12,7 +12,8 @@ from langchain_aws import BedrockLLM as Bedrock
 from langchain_community.embeddings import BedrockEmbeddings
 from pathlib import Path
 from styles import STYLES,BANNER,TYPING
-st.set_page_config(page_title="Echo Bot", page_icon="🤖")
+
+st.set_page_config(page_title="IVA Bot", page_icon="🤖")
 st.markdown(STYLES, unsafe_allow_html=True)
 
 # Top banner with bot logo and status
