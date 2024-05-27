@@ -6,7 +6,7 @@ from langchain_core.messages import AIMessage, HumanMessage
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_history_aware_retriever
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 import boto3
 from langchain_aws import BedrockLLM as Bedrock
 from langchain_community.embeddings import BedrockEmbeddings
